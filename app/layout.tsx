@@ -8,14 +8,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "J3 RAS Aquafarm - Sustainable Aquaculture",
-  description: "Premium fish farming with eco-friendly RAS technology, aquaponics, and hydroponics systems.",
-  generator: 'v0.dev',
-  verification: {
-    google: "Cpqbkgp_WTh1uKuDqJrp1VHsu0hdMfrwG8Nl0s4BHa8", // Correct Google verification
-  },
-};
+// export const metadata: Metadata = {
+//   title: "J3 RAS Aquafarm - Sustainable Aquaculture",
+//   description: "Premium fish farming with eco-friendly RAS technology, aquaponics, and hydroponics systems.",
+//   generator: 'v0.dev',
+//   verification: {
+//     google: "Cpqbkgp_WTh1uKuDqJrp1VHsu0hdMfrwG8Nl0s4BHa8", // Correct Google verification
+//   },
+// };
 
 function Navigation() {
   return (
