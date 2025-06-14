@@ -1,34 +1,28 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { Fish, Menu } from "lucide-react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Fish } from "lucide-react";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "J3 RAS Aquafarm - Sustainable Aquaculture",
   description: "Premium fish farming with eco-friendly RAS technology, aquaponics, and hydroponics systems.",
-    generator: 'v0.dev'
-}
+  generator: 'v0.dev',
+  verification: {
+    google: "Cpqbkgp_WTh1uKuDqJrp1VHsu0hdMfrwG8Nl0s4BHa8", // Put only the content value here
+  },
+};
 
-
-import Head from 'next/head';
-
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-site-verification" content="Cpqbkgp_WTh1uKuDqJrp1VHsu0hdMfrwG8Nl0s4BHa8" />
-        {/* Other Head elements */}
-      </head>
-      <body>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
+
 
 
 function Navigation() {
