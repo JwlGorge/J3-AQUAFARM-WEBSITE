@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Fish } from "lucide-react";
+import { Fish, Menu } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,19 +13,9 @@ export const metadata: Metadata = {
   description: "Premium fish farming with eco-friendly RAS technology, aquaponics, and hydroponics systems.",
   generator: 'v0.dev',
   verification: {
-    google: "Cpqbkgp_WTh1uKuDqJrp1VHsu0hdMfrwG8Nl0s4BHa8", // Put only the content value here
+    google: "Cpqbkgp_WTh1uKuDqJrp1VHsu0hdMfrwG8Nl0s4BHa8", // Correct Google verification
   },
 };
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
-}
-
-
 
 function Navigation() {
   return (
@@ -40,15 +32,9 @@ function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Home
-            </Link>
-            <Link href="/features" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Features
-            </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Contact
-            </Link>
+            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</Link>
+            <Link href="/features" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Features</Link>
+            <Link href="/contact" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</Link>
           </div>
 
           {/* Mobile Navigation */}
@@ -61,15 +47,9 @@ function Navigation() {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col gap-6 mt-6">
-                  <Link href="/" className="text-lg font-medium text-gray-800 hover:text-blue-600">
-                    Home
-                  </Link>
-                  <Link href="/features" className="text-lg font-medium text-gray-800 hover:text-blue-600">
-                    Features
-                  </Link>
-                  <Link href="/contact" className="text-lg font-medium text-gray-800 hover:text-blue-600">
-                    Contact
-                  </Link>
+                  <Link href="/" className="text-lg font-medium text-gray-800 hover:text-blue-600">Home</Link>
+                  <Link href="/features" className="text-lg font-medium text-gray-800 hover:text-blue-600">Features</Link>
+                  <Link href="/contact" className="text-lg font-medium text-gray-800 hover:text-blue-600">Contact</Link>
                 </div>
               </SheetContent>
             </Sheet>
@@ -77,7 +57,7 @@ function Navigation() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
 function Footer() {
@@ -99,15 +79,9 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <Link href="/" className="block text-gray-400 hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link href="/features" className="block text-gray-400 hover:text-white transition-colors">
-                Features
-              </Link>
-              <Link href="/contact" className="block text-gray-400 hover:text-white transition-colors">
-                Contact
-              </Link>
+              <Link href="/" className="block text-gray-400 hover:text-white transition-colors">Home</Link>
+              <Link href="/features" className="block text-gray-400 hover:text-white transition-colors">Features</Link>
+              <Link href="/contact" className="block text-gray-400 hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
           <div>
@@ -115,11 +89,7 @@ function Footer() {
             <div className="space-y-2 text-gray-400">
               <p>+91 9048856639</p>
               <p>j3aquafarm@gmail.com</p>
-              <p>
-                KIZHAKKE MAVADI, PERAVOOR
-                <br />
-                KANNUR ,KERALA
-              </p>
+              <p>KIZHAKKE MAVADI, PERAVOOR<br />KANNUR, KERALA</p>
             </div>
           </div>
         </div>
@@ -128,14 +98,10 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -144,5 +110,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  )
+  );
 }
