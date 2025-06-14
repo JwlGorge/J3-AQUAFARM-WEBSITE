@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://your-vercel-url.vercel.app
+
+# Sitemaps
+Sitemap: https://your-vercel-url.vercel.app/sitemap.xml
