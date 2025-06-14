@@ -15,6 +15,22 @@ export const metadata: Metadata = {
     generator: 'v0.dev'
 }
 
+
+import Head from 'next/head';
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="Cpqbkgp_WTh1uKuDqJrp1VHsu0hdMfrwG8Nl0s4BHa8" />
+        {/* Other Head elements */}
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}
+
+
 function Navigation() {
   return (
     <nav className="bg-white shadow-sm border-b border-blue-100">
